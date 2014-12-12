@@ -30,7 +30,7 @@ class TalkParser(object):
                 result = {}
                 if rownum == 0:
                     header = row
-                elif rownum > upperbound:
+                elif upperbound is not None and rownum > upperbound:
                     break
                 else:
                     for i,column in enumerate(header):
